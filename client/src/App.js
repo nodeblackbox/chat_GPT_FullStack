@@ -11,7 +11,10 @@ function App() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: inputMessage }),
     });
+    console.log(response);
+
     const data = await response.json();
+    console.log(data + "from App.js function App handleSubmit");
     setResponseMessage(data.response);
   };
 
