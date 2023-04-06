@@ -14,8 +14,8 @@ function App() {
     console.log(response);
 
     const data = await response.json();
-    console.log(data + "from App.js function App handleSubmit");
-    setResponseMessage(data.response);
+    console.log(data + " from App.js function App handleSubmit");
+    setResponseMessage(data); // Changed this line to display the content directly
   };
 
   return (
@@ -29,7 +29,7 @@ function App() {
         />
         <button type="submit">Send</button>
       </form>
-      <p>Response: {responseMessage}</p>
+      <p>Response: {responseMessage.response}</p>
     </div>
   );
 }
